@@ -13,6 +13,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="화면 이동"/>
+    <EditText
+            android:id="@+id/messageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="내용입룍"/>
+<Button
+    android:id="@+id/editBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="전달"/>
 
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+    <TextView
+            android:id="@+id/nickNameTxt"
+            android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="17sp"
+               android:text="이정빈"/>
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    <Button
+            android:id="@+id/editNickNameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임 변경경"/>
+
+</LinearLayout>
 </LinearLayout>

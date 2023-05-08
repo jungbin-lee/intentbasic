@@ -25,6 +25,35 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        callBtn.setOnClickListener{
+            val inputPhoneNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+
+            val myIntent =  Intent(Intent.ACTION_CALL, myUri)
+
+            startActivity(myIntent)
+
+        }
+        smsBtn.setOnClickListener{
+            val inputPhoneNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhoneNum}")
+
+            val myIntent =  Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms_body","미리내용입력")
+            startActivity(myIntent)
+
+        }
+naverBtn.setOnClickListener {
+    val myUri =Uri.parse("https://naver.com")
+    val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+    startActivity(myIntent)
+
+}
+        kakaoStoreBtn.setOnClickListener {
+            val myUri =Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
 
         editNickNameBtn.setOnClickListener {
             val myIntent =  Intent(this, EditNickNameActivity::class.java)
